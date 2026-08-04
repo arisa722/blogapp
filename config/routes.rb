@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   root to: 'articles#index'
   get '/about' => 'home#about'
+
+
+  resources :articles, only: [:show]
 end

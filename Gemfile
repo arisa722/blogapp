@@ -56,4 +56,8 @@ group :test do
   gem "selenium-webdriver"
   gem "sassc"
 gem "sassc-rails"
+
+
 end
+
+gem 'faker'
