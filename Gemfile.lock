@@ -106,6 +106,8 @@ GEM
     drb (2.2.3)
     erb (6.0.4)
     erubi (1.13.1)
+    faker (3.8.0)
+      i18n (>= 1.8.11, < 2)
     ffi (1.17.4-aarch64-linux-gnu)
     ffi (1.17.4-aarch64-linux-musl)
     ffi (1.17.4-arm-linux-gnu)
@@ -210,7 +212,7 @@ GEM
       activestorage (= 7.2.3)
       activesupport (= 7.2.3)
       bundler (>= 1.15.0)
-      railties (= 7.2.3)
+     railties (= 7.2.3)
     rails-dom-testing (2.3.0)
       activesupport (>= 5.0.0)
       minitest
@@ -350,6 +352,7 @@ DEPENDENCIES
   brakeman
   capybara
   debug
+  faker
   importmap-rails
   jbuilder
   puma (>= 5.0)
