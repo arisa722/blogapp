@@ -212,7 +212,6 @@ GEM
       activestorage (= 7.2.3)
       activesupport (= 7.2.3)
       bundler (>= 1.15.0)
-     railties (= 7.2.3)
     rails-dom-testing (2.3.0)
       activesupport (>= 5.0.0)
       minitest
