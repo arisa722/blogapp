@@ -15,5 +15,7 @@ Rails.application.routes.draw do
   get '/about' => 'home#about'
 
 
-  resources :articles, only: [:show, :new, :create, :edit, :update]
+
+
+  resources :articles, only: [:show, :new, :create, :edit, :update, :destroy]
 end
