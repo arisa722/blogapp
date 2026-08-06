@@ -81,6 +81,7 @@ GEM
       rake (>= 10.4, < 14.0)
     ast (2.4.3)
     base64 (0.3.0)
+    bcrypt (3.1.22)
     benchmark (0.5.0)
     better_errors (2.10.1)
       erubi (>= 1.0.0)
@@ -116,9 +117,16 @@ GEM
       irb (~> 1.10)
       reline (>= 0.3.8)
     debug_inspector (1.2.0)
-    device (0.0.0)
+    devise (5.0.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 7.0)
+      responders
+      warden (~> 1.2.3)
     drb (2.2.3)
     erb (6.0.4)
+    erb2haml (0.1.5)
+      html2haml
     erubi (1.13.1)
     erubis (2.7.0)
     faker (3.8.0)
@@ -137,6 +145,11 @@ GEM
       temple (>= 0.8.2)
       thor
       tilt
+    haml-rails (3.1.0)
+      actionpack (>= 5.1)
+      activesupport (>= 5.1)
+      haml (>= 4.0.6)
+      railties (>= 5.1)
     hamlit (4.0.0)
       temple (>= 0.8.2)
       thor
@@ -208,6 +221,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.19.4-x86_64-linux-musl)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     parallel (2.1.0)
     parser (3.3.11.1)
       ast (~> 2.4.1)
@@ -279,6 +293,9 @@ GEM
     regexp_parser (2.12.0)
     reline (0.6.3)
       io-console (~> 0.5)
+    responders (3.2.0)
+      actionpack (>= 7.0)
+      railties (>= 7.0)
     rexml (3.4.4)
     rouge (5.0.0)
       strscan (~> 3.1)
@@ -364,6 +381,8 @@ GEM
       unicode-emoji (~> 4.1)
     unicode-emoji (4.2.0)
     useragent (0.16.11)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -398,8 +417,10 @@ DEPENDENCIES
   brakeman
   capybara
   debug
-  device
+  devise
+  erb2haml
   faker
+  haml-rails
   hamlit
   html2haml
   importmap-rails
