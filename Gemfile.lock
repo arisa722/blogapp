@@ -116,6 +116,7 @@ GEM
       irb (~> 1.10)
       reline (>= 0.3.8)
     debug_inspector (1.2.0)
+    device (0.0.0)
     drb (2.2.3)
     erb (6.0.4)
     erubi (1.13.1)
@@ -397,6 +398,7 @@ DEPENDENCIES
   brakeman
   capybara
   debug
+  device
   faker
   hamlit
   html2haml

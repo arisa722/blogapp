@@ -13,14 +13,12 @@ class Article < ApplicationRecord
     validates :title, length: { minimum: 2, maximum: 100 }
     validates :title, format: { with: /\A(?!\@)/ }
 
-
     validates :content, length: { minimum: 10 }
     validates :content, presence: true
     validates :content, uniqueness: true
 
-    validate :validate_title_and_content_length
-
     # １００文字以上でないと保存できないようにする
+    # validate :validate_title_and_content_length
     # def validate_title_and_content_length
     #             char_count = self.title.length + self.content.length
     #     unless char_count > 100

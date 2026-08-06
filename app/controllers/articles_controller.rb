@@ -1,10 +1,9 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update]
-  
+  before_action :set_article, only: [ :show, :edit, :update ]
+
   def index
    @articles = Article.all
   end
-
 
   def show
   end
@@ -35,7 +34,6 @@ class ArticlesController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
   end
-
 
   def destroy
     article = Article.find(params[:id])
