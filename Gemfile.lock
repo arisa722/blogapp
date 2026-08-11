@@ -91,8 +91,8 @@ GEM
     bindex (0.8.1)
     binding_of_caller (2.0.0)
       debug_inspector (>= 1.2.0)
-    bootsnap (1.24.6)
-      msgpack (~> 1.2)
+    bootsnap (1.25.0)
+      msgpack (~> 1.5)
     brakeman (8.0.5)
       racc
     builder (3.3.0)
@@ -125,8 +125,6 @@ GEM
       warden (~> 1.2.3)
     drb (2.2.3)
     erb (6.0.4)
-    erb2haml (0.1.5)
-      html2haml
     erubi (1.13.1)
     erubis (2.7.0)
     faker (3.8.0)
@@ -194,7 +192,7 @@ GEM
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
-    msgpack (1.8.3)
+    msgpack (1.8.4)
     net-imap (0.6.4.1)
       date
       net-protocol
@@ -418,7 +416,6 @@ DEPENDENCIES
   capybara
   debug
   devise
-  erb2haml
   faker
   haml-rails
   hamlit
