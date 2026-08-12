@@ -15,5 +15,8 @@ Rails.application.routes.draw do
   root to: 'articles#index'
   get '/about' => 'home#about'
 
-  resources :articles
+  resources :articles do
+    resources :comments, only: [:create, :new]
+  end
+
 end

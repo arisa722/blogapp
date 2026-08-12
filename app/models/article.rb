@@ -31,6 +31,7 @@ class Article < ApplicationRecord
     #     end
     # end
 
+    has_many :comments, dependent: :destroy
     belongs_to :user
 
     def display_created_at
