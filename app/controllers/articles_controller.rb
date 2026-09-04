@@ -14,12 +14,12 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
     if @article.save
       redirect_to article_path(@article), notice: '保存できたよ'
     else
       flash.now[:error] = '保存できなかったよ'
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 
@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
       redirect_to article_path(@article), notice: '更新できました'
     else
       flash.now[:error] = '更新できませんでした'
-      render :edit, status: :unprocessable_entity
+      render :edit
     end
   end
 
