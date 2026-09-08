@@ -125,8 +125,6 @@ GEM
       warden (~> 1.2.3)
     drb (2.2.3)
     erb (6.0.4)
-    erb2haml (0.1.5)
-      html2haml
     erubi (1.13.1)
     erubis (2.7.0)
     faker (3.8.0)
@@ -418,7 +416,6 @@ DEPENDENCIES
   capybara
   debug
   devise
-  erb2haml
   faker
   haml-rails
   hamlit
