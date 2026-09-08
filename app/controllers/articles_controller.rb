@@ -44,9 +44,17 @@ class ArticlesController < ApplicationController
     redirect_to root_path, status: :see_other, notice: '削除に成功しました'
   end
 
+  def destroy
+    article = Article.find(params[:article_id])
+    like = article.likes.find_by(user_id: current_user.id)
+    like.destroy!
+    redirect_to article_path(article), notice: 'いいねを取り消しました'
+  end
+
+
 private
   def article_params
-    params.require(:article).permit(:title, :content)
+    params.require(:article).permit(:title, :content, :eyecatch)
   end
 
   def set_article
